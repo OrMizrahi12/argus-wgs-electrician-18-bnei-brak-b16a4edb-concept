@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="סקיצת דמו לעמוד שירותי חשמל עבור שגב שלום בבני ברק: שירות, אמון ודרכי קשר במקום אחד. לא אתר רשמי.">
+  <meta name="argus-target" content="שגב שלום">
+  <title>שגב שלום | שירותי חשמל בבני ברק</title>
+  <style>
+    :root {
+      --base:#0b1420;
+      --base-2:#14263a;
+      --surface:#f7fbfd;
+      --surface-2:#ebf7fb;
+      --surface-3:#d6f1f7;
+      --ink:#122131;
+      --muted:#607286;
+      --action:#f59e0b;
+      --action-2:#ffd27b;
+      --service:#0ea5e9;
+      --service-2:#9be3ff;
+      --trust:#14b8a6;
+      --trust-2:#99f6e4;
+      --boundary:#fff4d7;
+      --boundary-ink:#614400;
+      --accent-soft:#eefcff;
+      --line:rgba(15,36,58,.10);
+      --line-strong:rgba(15,36,58,.18);
+      --shadow:0 24px 60px rgba(11,21,38,.14);
+      --shadow-soft:0 16px 34px rgba(11,21,38,.08);
+      --radius-xl:34px;
+      --radius-lg:24px;
+      --radius-md:18px;
+      --radius-sm:14px;
+      --max:1180px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:"Assistant","Inter","Arial",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(34,211,238,.18), transparent 28%),
+        radial-gradient(circle at 88% 8%, rgba(251,191,36,.18), transparent 24%),
+        radial-gradient(circle at 78% 84%, rgba(34,197,94,.12), transparent 26%),
+        linear-gradient(180deg, #f9fcff 0%, var(--surface) 52%, #eef5fb 100%);
+      line-height:1.68;
+      min-height:100vh;
+    }
+    a { color:inherit; }
+    img { max-width:100%; display:block; }
+    .container { width:min(calc(100% - 1.5rem), var(--max)); margin:0 auto; }
+    .boundary-bar {
+      position:sticky; top:0; z-index:120;
+      display:flex; justify-content:center; align-items:center; gap:.6rem; flex-wrap:wrap;
+      padding:.8rem 1rem;
+      background:rgba(12,18,26,.96);
+      color:#f8fbff;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(12px);
+      text-align:center;
+      font-size:.96rem;
+    }
+    .boundary-bar strong { color:var(--action-2); }
+    .site-header {
+      position:sticky; top:58px; z-index:110;
+      background:rgba(249,252,255,.82);
+      backdrop-filter: blur(18px);
+      border-bottom:1px solid rgba(15,36,58,.06);
+    }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0; }
+    .brand { display:flex; align-items:center; gap:.9rem; text-decoration:none; min-width:0; }
+    .brand-mark {
+      width:3.2rem; height:3.2rem; border-radius:20px;
+      display:grid; place-items:center;
+      color:#fff;
+      background:linear-gradient(135deg, var(--service), var(--base));
+      box-shadow:0 16px 28px rgba(17,28,49,.24);
+      flex:0 0 auto;
+    }
+    .brand-mark svg { width:1.35rem; height:1.35rem; }
+    .brand-copy { min-width:0; }
+    .brand-name { display:block; font-weight:900; font-size:1.02rem; }
+    .brand-sub { display:block; color:var(--muted); font-size:.92rem; }
+    .main-nav { display:flex; gap:.85rem; flex-wrap:wrap; justify-content:flex-end; }
+    .main-nav a { text-decoration:none; color:var(--muted); font-weight:800; font-size:.96rem; }
+    .main-nav a:hover { color:var(--base-2); }
+    .hero { padding:3.4rem 0 1.8rem; }
+    .hero-shell {
+      position:relative;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:1.25rem;
+      padding:clamp(1.25rem, 3vw, 2.2rem);
+      border-radius:var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 42%, rgba(220,241,255,.96) 100%),
+        linear-gradient(135deg, var(--surface-2), var(--surface));
+      border:1px solid rgba(14,34,52,.08);
+      box-shadow:var(--shadow);
+      isolation:isolate;
+    }
+    .hero-shell::before {
+      content:""; position:absolute; inset:auto -12% -24% auto; width:20rem; height:20rem;
+      background:radial-gradient(circle, rgba(34,211,238,.22), transparent 70%);
+      z-index:-1; animation: drift 12s ease-in-out infinite;
+    }
+    .hero-shell::after {
+      content:""; position:absolute; inset:-18% auto auto -10%; width:18rem; height:18rem;
+      background:radial-gradient(circle, rgba(251,191,36,.18), transparent 72%);
+      z-index:-1; animation: drift 16s ease-in-out infinite reverse;
+    }
+    .eyebrow { margin:0 0 .8rem; color:var(--service); font-weight:900; letter-spacing:.02em; }
+    h1 { font-size:clamp(2.3rem, 6vw, 4.5rem); line-height:1.03; margin:0 0 1rem; }
+    h1 span { display:block; }
+    .lead { margin:0 0 1.25rem; max-width:60ch; color:#21364d; font-size:1.08rem; }
+    .hero-actions, .contact-actions { display:flex; gap:.75rem; flex-wrap:wrap; }
+    .button {
+      display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
+      min-height:3.15rem; padding:0 1.12rem; border-radius:999px;
+      border:1px solid transparent; text-decoration:none; font-weight:900;
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      white-space:nowrap;
+    }
+    .button:hover { transform:translateY(-1px); box-shadow:0 16px 28px rgba(13,23,41,.12); }
+    .button-icon { width:1.05rem; height:1.05rem; display:inline-grid; place-items:center; }
+    .button-icon svg { width:1.05rem; height:1.05rem; }
+    .button-primary { background:linear-gradient(135deg, var(--action), var(--action-2)); color:#1c1607; box-shadow:0 14px 24px rgba(245,158,11,.24); }
+    .button-secondary { background:#fff; color:var(--base-2); border-color:rgba(14,34,52,.12); }
+    .button-ghost { background:rgba(255,255,255,.72); color:var(--service); border-color:rgba(14,34,52,.12); }
+    .safe-note { margin-top:.95rem; color:var(--muted); font-size:.94rem; }
+    .chips { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:.8rem; margin-top:1.15rem; }
+    .chip { display:flex; gap:.75rem; align-items:flex-start; padding:.95rem 1rem; border-radius:18px; border:1px solid var(--line); background:rgba(255,255,255,.82); box-shadow:var(--shadow-soft); }
+    .chip small { display:block; color:var(--muted); margin-bottom:.15rem; }
+    .chip strong { display:block; font-size:.98rem; }
+    .chip-icon { width:1.2rem; height:1.2rem; color:var(--service); flex:0 0 auto; margin-top:.12rem; }
+    .chip-icon svg { width:1.2rem; height:1.2rem; }
+    .chip-call .chip-icon { color:var(--action); }
+    .chip-service .chip-icon { color:var(--service); }
+    .chip-proof .chip-icon { color:var(--trust); }
+    .chip-boundary { background:var(--boundary); border-color:rgba(95,70,0,.16); color:var(--boundary-ink); }
+    .chip-boundary .chip-icon { color:var(--boundary-ink); }
+    .chip-surface .chip-icon { color:var(--base-2); }
+    .hero-panel { display:grid; gap:.9rem; align-content:start; }
+    .hero-box { background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(243,249,255,.92)); border:1px solid rgba(15,36,58,.09); border-radius:var(--radius-lg); padding:1.05rem; box-shadow:var(--shadow-soft); }
+    .hero-box h2 { margin:.3rem 0 .55rem; font-size:1.08rem; }
+    .hero-box p { margin:0; color:#304659; }
+    .hero-grid { display:grid; gap:.85rem; }
+    .section { padding:2rem 0 0; }
+    .section-shell { padding:1.8rem 0; }
+    .section-head { max-width:62ch; margin-bottom:1.15rem; }
+    .section-head h2 { font-size:clamp(1.7rem, 4vw, 2.7rem); margin:0 0 .55rem; }
+    .section-head p { margin:0; color:var(--muted); }
+    .cards { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:1rem; }
+    .card { min-height:100%; padding:1.15rem; border-radius:var(--radius-lg); background:rgba(255,255,255,.90); border:1px solid var(--line); box-shadow:var(--shadow-soft); transition:transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform:translateY(-2px); box-shadow:0 20px 34px rgba(13,23,41,.10); }
+    .card-top { display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-bottom:.75rem; }
+    .card-icon { width:1.35rem; height:1.35rem; color:var(--service); }
+    .card-icon svg { width:1.35rem; height:1.35rem; }
+    .card-kicker { margin:0; color:var(--service); font-weight:900; font-size:.9rem; }
+    .card h3 { margin:0 0 .55rem; font-size:1.08rem; }
+    .card p { margin:0; color:#34495d; }
+    .trust-layout { display:grid; grid-template-columns:.92fr 1.08fr; gap:1.2rem; align-items:start; }
+    .trust-panel, .compare-panel, .contact-panel, .source-panel { background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:var(--radius-lg); box-shadow:var(--shadow-soft); padding:1.2rem; }
+    .trust-list { list-style:none; margin:0; padding:0; display:grid; gap:.9rem; }
+    .trust-list li { display:flex; gap:.8rem; align-items:flex-start; padding-bottom:.9rem; border-bottom:1px solid rgba(15,36,58,.08); }
+    .trust-list li:last-child { border-bottom:none; padding-bottom:0; }
+    .trust-icon { width:1.25rem; height:1.25rem; color:var(--trust); flex:0 0 auto; margin-top:.12rem; }
+    .trust-icon svg { width:1.25rem; height:1.25rem; }
+    .trust-list p { margin:.22rem 0 0; color:#334a5d; }
+    .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .compare-card { padding:1.15rem; border-radius:var(--radius-md); border:1px solid var(--line); min-height:100%; }
+    .compare-before { background:linear-gradient(180deg, #fff9f3, #fff); }
+    .compare-after { background:linear-gradient(180deg, rgba(219,234,254,.72), #fff); }
+    .compare-card h3 { margin:.15rem 0 .5rem; font-size:1.15rem; }
+    .compare-card p { margin:0; color:#31475d; }
+    .compare-note { margin-top:.8rem !important; color:var(--base-2) !important; font-weight:700; }
+    .faq-wrap { display:grid; gap:.8rem; }
+    details { background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:18px; padding:1rem 1.05rem; box-shadow:var(--shadow-soft); }
+    summary { cursor:pointer; font-weight:900; }
+    details p { margin:.8rem 0 0; color:#33495e; }
+    .contact-layout { display:grid; grid-template-columns:1.05fr .95fr; gap:1rem; align-items:start; }
+    .contact-facts { display:grid; gap:.75rem; margin:1rem 0 0; }
+    .contact-facts div { background:rgba(255,255,255,.8); border:1px solid var(--line); border-radius:16px; padding:.85rem .95rem; }
+    .contact-facts dt { color:var(--muted); font-size:.92rem; }
+    .contact-facts dd { margin:.22rem 0 0; font-weight:800; }
+    .source-panel ul { margin:.45rem 0 0; padding-inline-start:1.1rem; }
+    .source-panel li + li { margin-top:.5rem; }
+    .source-panel a { color:var(--service); font-weight:800; text-decoration:none; }
+    .footnote { margin-top:.95rem; color:var(--muted); font-size:.92rem; }
+    .mobile-cta {
+      position:fixed; inset:auto .8rem .8rem .8rem; z-index:115;
+      display:none; gap:.65rem; padding:.7rem; border-radius:20px;
+      background:rgba(9,21,33,.94); backdrop-filter:blur(16px);
+      box-shadow:0 20px 40px rgba(8,15,25,.28);
+    }
+    .mobile-cta a { flex:1; min-width:0; display:flex; align-items:center; justify-content:center; gap:.45rem; text-decoration:none; padding:.9rem .8rem; border-radius:14px; font-weight:900; }
+    .mobile-cta a:first-child { background:linear-gradient(135deg, var(--action), var(--action-2)); color:#1b1505; }
+    .mobile-cta a:last-child { background:#fff; color:var(--base-2); }
+    .mobile-cta svg { width:1rem; height:1rem; }
+    footer { padding:2rem 0 7rem; color:var(--muted); font-size:.95rem; }
+    @keyframes drift { 0%,100% { transform:translate3d(0,0,0); } 50% { transform:translate3d(0,-10px,0); } }
+    @media (max-width: 1040px) {
+      .hero-shell, .trust-layout, .contact-layout { grid-template-columns:1fr; }
+      .cards { grid-template-columns:repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 720px) {
+      .site-header { top:74px; }
+      .header-inner { flex-direction:column; align-items:flex-start; }
+      .main-nav { justify-content:flex-start; }
+      h1 { font-size:clamp(2rem, 10vw, 3rem); }
+      .chips { grid-template-columns:1fr; }
+      .cards, .compare-grid { grid-template-columns:1fr; }
+      .hero { padding-top:2rem; }
+      .mobile-cta { display:flex; }
+      footer { padding-bottom:8.6rem; }
+    }
+    @media (max-width: 430px) {
+      .container { width:min(calc(100% - 1rem), var(--max)); }
+      .hero-shell { padding:1rem; }
+      .button { width:100%; }
+      .hero-actions, .contact-actions { flex-direction:column; }
+      .boundary-bar { font-size:.9rem; padding:.72rem .7rem; }
+      .mobile-cta a span { font-size:.92rem; }
+      .mobile-cta { display:none !important; }
+      footer { padding-bottom:2.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="boundary-bar"><strong>סקיצת דמו בלבד — לא אתר רשמי, ללא שיוך לעסק, וללא הבטחת תוצאות.</strong><span>דף דמו לא רשמי, noindex, ובלי איסוף לידים.</span></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 13h5l-1 9 10-13h-5l-1-7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy">
+          <span class="brand-name">שגב שלום</span>
+          <span class="brand-sub">שירותי חשמל בבני ברק · סקיצת דמו</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="ניווט מהיר">
+        <a href="#intent">חיפושים ושירות</a>
+        <a href="#trust">אמון</a>
+        <a href="#faq">שאלות</a>
+        <a href="#contact">יצירת קשר</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-shell">
+        <div>
+          <p class="eyebrow">לא מצאנו אתר רשמי עצמאי במקורות הציבוריים שבדקנו עבור שגב שלום</p>
+          <h1><span>שגב שלום — שירותי חשמל בבני ברק עם דרך קשר ברורה במקום אחד</span></h1>
+          <p class="lead">עמוד דמו לא רשמי שמרכז עבור שגב שלום את בני ברק, נתיבי הקשר הציבוריים ושכבת האמון הזהירה במקום תלות בדף ספרייה או פלטפורמה בלבד. המטרה כאן היא לקצר את הדרך בין חיפוש מקומי לבין הבנה מהירה של מי העסק ואיך ממשיכים.</p>
+          <div class="hero-actions"><a class="button button-primary" href="tel:+972536800574"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.28.54 3.5.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.18 2.4.54 3.5a1 1 0 0 1-.24 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>התקשרו עכשיו</span></a><a class="button button-secondary" href="mailto:segev154@gmail.com?subject=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%91%D7%A2%D7%A7%D7%91%D7%95%D7%AA%20%D7%A1%D7%A7%D7%99%D7%A6%D7%AA%20%D7%94%D7%93%D7%9E%D7%95%20%D7%A2%D7%91%D7%95%D7%A8%20%D7%A9%D7%92%D7%91%20%D7%A9%D7%9C%D7%95%D7%9D"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>שליחת מייל ציבורי</span></a><a class="button button-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%D7%90%D7%95%D7%A1%D7%99%D7%A9%D7%A7%D7%99%D7%9F%2013%2C%20%D7%91%D7%A0%D7%99%20%D7%91%D7%A8%D7%A7" target="_blank" rel="noopener noreferrer"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>פתיחה במפה</span></a><a class="button button-ghost" href="https://www.d.co.il/80164138/17910/" target="_blank" rel="noopener noreferrer"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 4v16M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>מבט למקור הציבורי</span></a></div>
+          <p class="safe-note">הדמו משתמש רק בטלפון, מייל ציבורי אם נצפה, ומפה. סקיצת דמו לעמוד אחד שמרכז מה העסק עושה לפי המידע הציבורי, איפה הוא פועל, איך יוצרים קשר ומה חשוב להבין לפני פנייה — בלי להסתמך רק על דף ספרייה או פלטפורמות מפוזרות.</p>
+          <div class="chips"><div class="chip chip-call"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.28.54 3.5.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.18 2.4.54 3.5a1 1 0 0 1-.24 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><small>טלפון ציבורי</small><strong>053-6800574</strong></div></div><div class="chip chip-service"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><div><small>עיר/כתובת</small><strong>אוסישקין 13, בני ברק</strong></div></div><div class="chip chip-surface"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><small>שעות ציבוריות</small><strong>ימים א&#x27; - ה&#x27;: 7:30 - 19:30 · יום ו&#x27;: 9:00 - 13:00</strong></div></div><div class="chip chip-proof"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3.4 8 7 10 3.6-2 7-5 7-10V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><small>אות ציבורי</small><strong>ללא אות ביקורות יציב שנשמר</strong></div></div></div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-box">
+            <p class="eyebrow">מסך ראשון מבוסס SCA</p>
+            <h2>מה הלקוח צריך להבין מהר לפני פנייה</h2>
+            <p>מבקר עם כוונת יצירת קשר לא צריך להרכיב לבד את התמונה מתוך פלטפורמות צד שלישי; עמוד אחד יכול לקצר את הדרך להבנה ולפעולה בלי להבטיח לידים, הכנסות או דירוגים.</p>
+          </div>
+          <div class="hero-grid"><div class="chip chip-surface"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 10v5M12 7h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><small>למה הדמו נבנה</small><strong>Lack of a controlled standalone Search &amp; Conversion Architecture page for a contact-heavy local-service electrician business.</strong></div></div><div class="chip chip-surface"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 4v16M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><small>סטטוס נראות נוכחי</small><strong>לא מצאנו אתר רשמי עצמאי במקורות הציבוריים שנבדקו</strong></div></div><div class="chip chip-boundary"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3.4 8 7 10 3.6-2 7-5 7-10V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><small>גבול בטיחות</small><strong>מידע ציבורי בלבד · ללא טופס · ללא התחזות</strong></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="intent" class="section">
+      <div class="container section-shell">
+        <div class="section-head">
+          <h2>שירות וחיפוש במסלול אחד</h2>
+          <p>עמוד הדמו מסדר את שפת החיפוש, ההקשר המקומי ודרך הפעולה הראשונה במקום להשאיר את הלקוח בתוך דף ספרייה דל.</p>
+        </div>
+        <div class="cards"><article class="card"><div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3.5" width="12" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><p class="card-kicker">עובדה ציבורית</p></div><h3>חשמלאים</h3><p>ניסוח שירות זהיר שנשמר מהמידע הציבורי שנבדק, בלי להרחיב לרשימת שירותים רשמית שלא אושרה.</p></article><article class="card"><div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><p class="card-kicker">כוונת חיפוש מקומית</p></div><h3>חשמלאי בני ברק</h3><p>כך לקוח מקומי עשוי לחפש חשמלאי. הדמו מתרגם את החיפוש למסך החלטה ברור יותר.</p></article><article class="card"><div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><p class="card-kicker">כוונת חיפוש מקומית</p></div><h3>שירותי חשמל בני ברק</h3><p>כך לקוח מקומי עשוי לחפש חשמלאי. הדמו מתרגם את החיפוש למסך החלטה ברור יותר.</p></article><article class="card"><div class="card-top"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19a3 3 0 1 1 2.8-4H16a3 3 0 1 0 0-6H8a3 3 0 1 1 0-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="card-kicker">מסלול החלטה</p></div><h3>פרטי קשר מוקדמים בבני ברק</h3><p>טלפון, מייל ציבורי אם נצפה, ומפה מופיעים מוקדם כדי לקצר את הדרך להבנה ולפעולה.</p></article></div>
+      </div>
+    </section>
+
+    <section id="trust" class="section">
+      <div class="container section-shell trust-layout">
+        <div class="trust-panel">
+          <div class="section-head">
+            <h2>שכבת אמון ציבורית וזהירה</h2>
+            <p>רק אותות אמון ופרטי קשר שנצפו במקורות הציבוריים שנבדקו, בלי להמציא הסמכות, מחירים או הבטחות.</p>
+          </div>
+          <ul class="trust-list"><li><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 4v16M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><strong>פרטי קשר ציבוריים מרוכזים</strong><p>טלפון 053-6800574 · מייל segev154@gmail.com · כתובת אוסישקין 13, בני ברק</p></div></li><li><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3.4 8 7 10 3.6-2 7-5 7-10V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><strong>אות אמון זהיר בלבד</strong><p>לא נשמר אות ביקורות יציב במידע הציבורי שנבדק, ולכן שכבת האמון כאן נשענת על סדר, מיקום, פרטי קשר וגבולות מידע ברורים בלבד.</p></div></li><li><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>שעות ציבוריות אם נצפו</strong><p>ימים א&#x27; - ה&#x27;: 7:30 - 19:30 · יום ו&#x27;: 9:00 - 13:00</p></div></li><li><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19a3 3 0 1 1 2.8-4H16a3 3 0 1 0 0-6H8a3 3 0 1 1 0-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>מה הדף מתקן</strong><p>עמוד RTL אחד שמרכז שירותי חשמל, פרטי קשר, הוכחה ציבורית זהירה ו-CTA ברור כבר במסך הראשון עבור שגב שלום.</p></div></li><li><span class="trust-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 10v5M12 7h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><strong>מה הדף לא טוען</strong><p>אין כאן טענות על רישוי, זמינות רציפה, אחריות, מחיר, דירוג מלא או תוצאות עסקיות שלא נבדקו.</p></div></li></ul>
+        </div>
+        <div class="compare-panel">
+          <div class="section-head">
+            <h2>לפני / אחרי</h2>
+            <p>מה משתנה כשהעסק מקבל עמוד ברור יותר במקום להישען רק על נראות צד ג׳.</p>
+          </div>
+          <div class="compare-grid"><article class="compare-card compare-before"><p class="card-kicker">לפני</p><h3>לא מצאנו אתר רשמי עצמאי; הלקוח נשען כרגע בעיקר על דף ספרייה/פלטפורמה ציבורית במקום על עמוד עצמאי.</h3><p>לא מצאנו אתר רשמי עצמאי במקורות הציבוריים שבדקנו עבור שגב שלום</p></article><article class="compare-card compare-after"><p class="card-kicker">כיוון ברור יותר</p><h3>שגב שלום · בני ברק</h3><p>עמוד RTL אחד שמרכז שירותי חשמל, פרטי קשר, הוכחה ציבורית זהירה ו-CTA ברור כבר במסך הראשון עבור שגב שלום.</p><p class="compare-note">מבקר עם כוונת יצירת קשר לא צריך להרכיב לבד את התמונה מתוך פלטפורמות צד שלישי; עמוד אחד יכול לקצר את הדרך להבנה ולפעולה בלי להבטיח לידים, הכנסות או דירוגים.</p></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container section-shell">
+        <div class="section-head">
+          <h2>שאלות נפוצות לפני יצירת קשר</h2>
+          <p>התשובות נשארות בגבולות המידע הציבורי שנבדק בשלב זה.</p>
+        </div>
+        <div class="faq-wrap"><details open><summary>איך יוצרים קשר עם שגב שלום?</summary><p>בדמו מוצגים רק נתיבי קשר ציבוריים שנצפו: טלפון 053-6800574, מייל ציבורי segev154@gmail.com, וקישור למפה. אין כאן טופס ואין שמירת נתונים.</p></details><details><summary>האם זה דף רשמי של העסק?</summary><p>לא. זו סקיצת דמו בלתי רשמית בלבד שנבנתה לצורך המחשה של מסך ראשון ברור יותר, עם noindex ובלי התחזות לעמוד הבעלות של העסק.</p></details><details><summary>מה מבוסס כאן על מידע ציבורי בלבד?</summary><p>שם העסק, העיר, פרטי הקשר שנצפו, הכתובת אם נצפתה, שעות אם נצפו, ואות ביקורת ציבורי זהיר אם נשמר במקור. לא נוספו כאן רישוי, אחריות, מחירים או הבטחות תוצאה.</p></details><details><summary>למה אין טופס השארת פרטים?</summary><p>כי זו סקיצת דמו לא רשמית בלבד. הדף משתמש רק בקישורי טלפון, מייל ציבורי ומפה, בלי לכידת לידים ובלי לייצר תחושה של אתר רשמי.</p></details><details><summary>איך יוצרים קשר עם העסק?</summary><p>התשובה בדמו נשארת שמרנית ומוגבלת למידע הציבורי שנבדק עד שלב זה.</p></details></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container section-shell contact-layout">
+        <div class="contact-panel">
+          <div class="section-head">
+            <h2>יצירת קשר ציבורית בלבד</h2>
+            <p>הדמו לא אוסף פרטים. הוא רק מסדר את ערוצי הקשר הציבוריים שנצפו כך שהלקוח יבין מהר מה הצעד הבא.</p>
+          </div>
+          <div class="contact-actions"><a class="button button-primary" href="tel:+972536800574"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.28.54 3.5.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.18 2.4.54 3.5a1 1 0 0 1-.24 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>התקשרו עכשיו</span></a><a class="button button-secondary" href="mailto:segev154@gmail.com?subject=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%91%D7%A2%D7%A7%D7%91%D7%95%D7%AA%20%D7%A1%D7%A7%D7%99%D7%A6%D7%AA%20%D7%94%D7%93%D7%9E%D7%95%20%D7%A2%D7%91%D7%95%D7%A8%20%D7%A9%D7%92%D7%91%20%D7%A9%D7%9C%D7%95%D7%9D"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>שליחת מייל ציבורי</span></a><a class="button button-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%D7%90%D7%95%D7%A1%D7%99%D7%A9%D7%A7%D7%99%D7%9F%2013%2C%20%D7%91%D7%A0%D7%99%20%D7%91%D7%A8%D7%A7" target="_blank" rel="noopener noreferrer"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>פתיחה במפה</span></a><a class="button button-ghost" href="https://www.d.co.il/80164138/17910/" target="_blank" rel="noopener noreferrer"><span class="button-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 4v16M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>מבט למקור הציבורי</span></a></div>
+          <dl class="contact-facts">
+            <div><dt>טלפון ציבורי</dt><dd>053-6800574</dd></div>
+            <div><dt>עיר / כתובת</dt><dd>אוסישקין 13, בני ברק</dd></div>
+            <div><dt>שעות ציבוריות</dt><dd>ימים א&#x27; - ה&#x27;: 7:30 - 19:30 · יום ו&#x27;: 9:00 - 13:00</dd></div>
+            <div><dt>סטטוס אתר</dt><dd>לא מצאנו אתר רשמי עצמאי במקורות הציבוריים שבדקנו עבור שגב שלום</dd></div>
+          </dl>
+        </div>
+        <aside class="source-panel">
+          <div class="section-head">
+            <h2>מקורות ציבוריים שנבדקו</h2>
+            <p>שקיפות מלאה על מה ראינו במקורות הציבוריים — בלי להציג את הדמו כאתר רשמי.</p>
+          </div>
+          <ul><li><a href="https://www.d.co.il/80164138/17910/" target="_blank" rel="noopener noreferrer">דף הספרייה הציבורי שנבדק</a></li><li><a href="https://www.google.com/maps/search/%D7%A9%D7%92%D7%91%20%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%20%D7%91%D7%A8%D7%A7%20%D7%97%D7%A9%D7%9E%D7%9C%D7%90%D7%99" target="_blank" rel="noopener noreferrer">מקור ציבורי נוסף שנבדק</a></li></ul>
+          <p class="footnote">לא נשמר אות ביקורות יציב במידע הציבורי שנבדק, ולכן שכבת האמון כאן נשענת על סדר, מיקום, פרטי קשר וגבולות מידע ברורים בלבד.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-cta" aria-label="קיצורי פעולה לנייד"><a href="tel:+972536800574"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.28.54 3.5.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.18 2.4.54 3.5a1 1 0 0 1-.24 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>התקשרו עכשיו</span></a><a href="mailto:segev154@gmail.com?subject=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%91%D7%A2%D7%A7%D7%91%D7%95%D7%AA%20%D7%A1%D7%A7%D7%99%D7%A6%D7%AA%20%D7%94%D7%93%D7%9E%D7%95%20%D7%A2%D7%91%D7%95%D7%A8%20%D7%A9%D7%92%D7%91%20%D7%A9%D7%9C%D7%95%D7%9D"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>שליחת מייל ציבורי</span></a></div>
+
+  <footer>
+    <div class="container">
+      <strong>סקיצת דמו בלבד — לא אתר רשמי, ללא שיוך לעסק, וללא הבטחת תוצאות.</strong>
+      <p>העמוד בנוי לצורך הדגמת SCA בלבד. לא אתר רשמי, לא שיוך לעסק, לא טופס, לא התחזות, ולא הבטחת תוצאות.</p>
+    </div>
+  </footer>
+</body>
+</html>
